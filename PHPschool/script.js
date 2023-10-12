@@ -8,8 +8,8 @@ const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
 const textDisplay = document.getElementById('textDisplay');
-
-
+const tableDisplay = document.getElementById('tableDisplay');
+const contentContainer = document.getElementById('contentContainer');
 
 button1.addEventListener('click', () => {
     textDisplay.textContent = 'Als 18-jarige student uit Oekraïne' +
@@ -24,6 +24,8 @@ button1.addEventListener('click', () => {
         'hebben op de wereld van technologie en innovatie,' +
         ' en ik kijk vol enthousiasme uit naar wat de' +
         ' toekomst te bieden heeft.';
+    tableDisplay.classList.add('visible');
+    contentContainer.classList.remove('hidden');
     textDisplay.classList.add('textjs');
 
 
@@ -41,7 +43,10 @@ button2.addEventListener('click', () => {
         ' heerlijk om mijn vrije tijd te delen met mijn ' +
         'vrienden, omdat we samen onvergetelijke momenten' +
         ' creëren in zowel de gamewereld als daarbuiten.';
+    tableDisplay.classList.remove('visible'); // Прибрати клас "visible", якщо він вже доданий
+    contentContainer.classList.add('hidden'); // Додати клас "hidden"
     textDisplay.classList.add('textjs');
+
 
 });
 
@@ -71,7 +76,10 @@ button3.addEventListener('click', () => {
         'Elke stad heeft zijn eigen unieke charme en ik voel me ' +
         'bevoorrecht om deze prachtige plaatsen te mogen ontdekken.' +
         ' Op naar nieuwe avonturen en onvergetelijke herinneringen!';
-    textDisplay.classList.add('textjs');
+    tableDisplay.classList.remove('visible'); // Прибрати клас "visible", якщо він вже доданий
+    contentContainer.classList.add('hidden'); // Додати клас "hidden"
+    textDisplay.classList.add('textjs')
+
 });
 
 button4.addEventListener('click', () => {
@@ -89,5 +97,7 @@ button4.addEventListener('click', () => {
         ' van pas zullen komen. Het is een uitdaging, maar ik geniet van de ' +
         'veelzijdigheid van mijn dagelijks leven en het feit dat ik zowel ' +
         'professioneel als academisch groei.';
-    textDisplay.classList.add('textjs');
+    tableDisplay.classList.remove('visible'); // Прибрати клас "visible", якщо він вже доданий
+    contentContainer.classList.add('hidden'); // Додати клас "hidden"
+    textDisplay.classList.add('textjs')
 });
